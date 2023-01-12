@@ -9,7 +9,6 @@ export const Navbar = () => {
   const dispatch = useDispatch();
   const { loggedUserName, loggedUser } = useSelector((store) => store.user);
 
-  console.log(loggedUserName);
 
   const handleLogout = () => {
     dispatch(logoutUser());
@@ -42,7 +41,7 @@ export const Navbar = () => {
         <>
           {loggedUserName.isAdmin ? (
             <Button colorScheme="teal" variant="solid">
-              <Link to="/add-course">ADD COURSE</Link>
+              <Link to="/add-course">ADD SUBSCRIPTION</Link>
             </Button>
           ) : null}
           <Button colorScheme="teal" variant="solid">
