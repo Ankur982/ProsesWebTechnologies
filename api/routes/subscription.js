@@ -34,6 +34,7 @@ router.get("/subscription", verifyToken, async (req, res) => {
     }
   });
   
-  
 
+
+  module.exports = router;
   

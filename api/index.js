@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 const express = require('express');
 const dbConnect = require("./dbConnect");
 const userRoutes = require("./routes/user")
+const subscriptionRoutes = require("./routes/subscription")
 const cors = require("cors");
 
 //dotenv
@@ -25,7 +26,7 @@ app.use(express.json());
 
 app.use("/auth", userRoutes);
 
-
+app.use("/api", subscriptionRoutes);
 
 
 //listening server

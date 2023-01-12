@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const verifyToken = (req, res, next) => {
   const token = req.headers.token;
   if (token) {
-    jwt.verify(token, "khanGlobalStudies", (err, user) => {
+    jwt.verify(token, "ProsesWebTechnologies", (err, user) => {
       if (err) res.status(403).json("Token is not valid!");
       req.user = user;
       next();
@@ -49,7 +49,7 @@ const fetchuser = (req, res, next) => {
 
   try {
 
-    const data = jwt.verify(token, "khanGlobalStudies");
+    const data = jwt.verify(token, "ProsesWebTechnologies");
     console.log(data);
     req.user = data.id;
     next();
